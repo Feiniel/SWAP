@@ -65,3 +65,9 @@ Ahora probamos a conectarnos por SSH desde la máquina 1 a la 2, creamos un arch
 ![captura12](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c12.PNG)
 
 ![captura13](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c13.PNG)
+
+Y viceversa:
+
+![captura14](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c14.PNG)
+
+![captura15](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c15.PNG)
