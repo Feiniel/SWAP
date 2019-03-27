@@ -34,3 +34,28 @@ Una vez hecho esto solamente falta instalar *curl* para que la instalación est�
 Una vez hecho esto, clonamos esta máquina.
 
 ## Conexión por SSH
+Para conectar las dos máquinas por SSH primero es necesario crear una red interna entre ambas. Para ello primero añadimos la red en cada una de las máquinas desde el menú de VirtualBox:
+
+![captura5](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c5.PNG)
+
+Una vez está añadida, hay que configurar esta red en ambas máquinas. Para ello se modifica el archivo */etc/network/interfaces* y se añade la información correspondiente a la red interna en ambas máquinas:
+
+![captura6](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c6.PNG)
+
+![captura7](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c7.PNG)
+
+Al ejecutar *ifconfig* todavía no aparece la red interna, y eso es porque es necesario ejecutar el siguiente comando:
+``` sh
+$ systemctl restart networking.service
+```
+Aquí se observa la salida del comando *ifconfig* en ambas máquinas una vez se detecta la red interna:
+
+![captura8](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c8.PNG)
+
+![captura9](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c9.PNG)
+
+Una vez hecho esto, comprobamos mediante un ping que ambas máquinas se ven:
+
+![captura10](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c10.PNG)
+
+![captura11](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c11.PNG)
