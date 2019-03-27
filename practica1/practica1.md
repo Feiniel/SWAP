@@ -14,16 +14,14 @@ Para crear las dos máquinas virtuales que se piden en la práctica hemos utiliz
 ![captura1](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c1.png)
 
 Tras esta instalación comprobamos la versión del servidor Apache instalado mediante el comando:
-```sh
-$ apache2 -v
-```
+
+> $ apache2 -v
 
 ![captura2](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c2.PNG)
 
 Asimismo, comprobamos que está en ejecución con el siguiente comando:
-``` sh
-$ ps aux | grep apache
-```
+
+> $ ps aux | grep apache
 
 ![captura3](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c3.PNG)
 
@@ -45,9 +43,9 @@ Una vez está añadida, hay que configurar esta red en ambas máquinas. Para ell
 ![captura7](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c7.PNG)
 
 Al ejecutar *ifconfig* todavía no aparece la red interna, y eso es porque es necesario ejecutar el siguiente comando:
-``` sh
-$ systemctl restart networking.service
-```
+
+> $ systemctl restart networking.service
+
 Aquí se observa la salida del comando *ifconfig* en ambas máquinas una vez se detecta la red interna:
 
 ![captura8](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c8.PNG)
