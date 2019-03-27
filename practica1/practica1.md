@@ -71,3 +71,18 @@ Y viceversa:
 ![captura14](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c14.PNG)
 
 ![captura15](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c15.PNG)
+
+
+## Conexión usando *curl*
+Hemos creado un archivo html en ambas máquinas, llamado *hola.html* en la carpeta */var/www/html*, y utilizando *curl* hemos accedido a este desde la otra máquina. 
+Primero desde la máquina 2 a la 1:
+
+![captura16](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c16.PNG)
+
+![captura17](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c17.PNG)
+
+Y luego desde la máquina 1 a la 2:
+
+![captura18](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c18.PNG)
+
+![captura19](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c19.PNG)
