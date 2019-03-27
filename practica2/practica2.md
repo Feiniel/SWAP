@@ -20,14 +20,20 @@ Usamos el siguiente comando:
 Mandando así al ssh la salida de la creacion del tar
 
 * Podemos ver aquí como lo hemos ejecutamos un ls en una máquina y no hay nada
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/1.png)
+
 * Aquí vemos como ejecutamos el comando en otra máquina conectada previamente por ssh
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/2.png)
+
 * Y aquí vemos como la máquina primera ya si tiene el arvhivo
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/3.png)
+
 Sin embargo esto no sirve para cantidades grandes de información.
 
-## 2. Instalar la herramienta rsync
+## Instalar la herramienta rsync
 
 Hemos instalado rsync mediante
 
@@ -42,32 +48,42 @@ Vamos a clonar la carpeta del servidor web principal mediante el comando
 > rsync -avz -e ssh ipmaquina1:/var/www/ /var/www/
 
 * Para ello en primer lugar modificaremos una de las carpetas:
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/4.png)
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/5.png)
+
 * Y pasamos a usar el comando:
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/6.png)
+
 * No nos pide la contraseña ya que ya había configurado ssh para que no nos pidiese contraseña
 
-## 3. Acceso sin contraseña para ssh
+## Acceso sin contraseña para ssh
 Es muy útil a la hora de ejecutar scripts sin que sea necesario que se teclée la contraseña.
 Por tanto vamos a pasar a obtener acceso sin contraseña a ssh.
 * En primer lugar mediante ssh-keygen generamos la clave
 * Por tanto ejecutamos:
+
 > ssh-keygen -b 4096 -t rsa
 
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/8.png)
+
 Pasamos a copiar la clave al equipo remoto, añadiendola al fichero
+
 > ~/.ssh/authorized_keys
 
 Necesitamos tener permisos 600:
+
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/9.png)
 
 Para hacer la copia usamos el comando:
+
 > ssh-copy-id maquina1
 
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/10.png)
 
-## 4. Programar tareas con crontab
+## Programar tareas con crontab
 Vamos a establecer una tarea en cron que se ejecute cada hora para mantener
 actualizado el contenido del directorio /var/www entre las dos máquinas
 
@@ -78,5 +94,3 @@ actualizado el contenido del directorio /var/www entre las dos máquinas
 Donde modificamos una sentencia para que realize el comando que usamos al principio de la práctica.
 
 Y hasta aquí esta práctica
-
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/11.jpg)
