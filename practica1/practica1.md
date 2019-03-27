@@ -1,5 +1,5 @@
 # Práctica 1 SWAP: Preparación de las herramientas
-    Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
+    Autores: David Joaquín Gonzalez-Venegas Guerra-Librero y Marina Hurtado Rosales
     Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
 En esta práctica el objetivo es configurar las máquinas virtuales (al menos dos) para
 trabajar en prácticas posteriores, asegurando la conectividad entre dichas máquinas.
