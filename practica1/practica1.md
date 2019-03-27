@@ -59,3 +59,9 @@ Una vez hecho esto, comprobamos mediante un ping que ambas máquinas se ven:
 ![captura10](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c10.PNG)
 
 ![captura11](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c11.PNG)
+
+Ahora probamos a conectarnos por SSH desde la máquina 1 a la 2, creamos un archivo en esa máquina, cerramos la conexión SSH y luego comprobamos desde la máquina 2 que se ha creado el archivo con éxito:
+
+![captura12](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c12.PNG)
+
+![captura13](https://github.com/Feiniel/SWAP/blob/master/practica1/imagenes/c13.PNG)
