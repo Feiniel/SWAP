@@ -6,22 +6,7 @@ El problema a solucionar es la sobrecarga de los servidores. Se puede balancear
 cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías web, balancearemos los servidores HTTP que tenemos configurados.
  De esta forma conseguiremos una infraestructura redundante y de alta disponibilidad.
  El objetivo es obtener la siguiente red de máquinas:
-```mermaid
-graph LR
-	subgraph granja web
-		subgraph servidores web
-			A[m1]
-			B[m2]
-		end
-		subgraph balanceador
-			A --- C[m3-b]
-		end
-		B --- C
-	end
-	subgraph hace peticiones
-		C --- D[m4]
-	end
-```
+![img](https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/graficoGranjaWweb.PNG)
 De esta manera en esta práctica se realizarán las siguientes tareas:
 - Configurar una máquina e instalar **nginx** como balanceador de carga.
 - Configurar una máquina e instalar **haproxy** como balanceador de carga.
