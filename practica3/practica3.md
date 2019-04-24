@@ -7,7 +7,9 @@ cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías
  De esta forma conseguiremos una infraestructura redundante y de alta disponibilidad.
  El objetivo es obtener la siguiente red de máquinas:
  
-<center>![img](https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/graficoGranjaWweb.PNG)</center>
+<center>
+    ![img](https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/graficoGranjaWweb.PNG)
+</center>
 
 De esta manera en esta práctica se realizarán las siguientes tareas:
 - Configurar una máquina e instalar **nginx** como balanceador de carga.
