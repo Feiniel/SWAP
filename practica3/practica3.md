@@ -8,7 +8,7 @@ cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías
  El objetivo es obtener la siguiente red de máquinas:
  
 <p align="center">
-    ![img](https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/graficoGranjaWweb.PNG)
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/graficoGranjaWweb.PNG">
 </p>
 
 De esta manera en esta práctica se realizarán las siguientes tareas:
