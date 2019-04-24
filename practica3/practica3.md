@@ -14,7 +14,7 @@ cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías
 De esta manera en esta práctica se realizarán las siguientes tareas:
 - Configurar una máquina e instalar **nginx** como balanceador de carga.
 - Configurar una máquina e instalar **haproxy** como balanceador de carga.
-- Someter a la granja web a una alta carga, generada con la herramienta Apache Benchmark, teniendo primero nginx y después haproxy.
+- Someter a la granja web a una alta carga, generada con la herramienta **Apache Benchmark**, teniendo primero nginx y después haproxy.
 
 
 --------------------------------------------------------------------------------------------------------------------
