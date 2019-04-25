@@ -153,3 +153,26 @@ Tras realizar la misma prueba que con nginx observamos que el algoritmo funciona
 
 
 ## Sometimiento de la granja web a una alta carga con Apache Benchmark
+Para someter a una alta carga el servidor balanceado vamos a utilizar Apache Benchmark, el cual instalaremos en la máquina 4 (la máquina que hace las peticiones). Ejecutamos el comando:
+```
+$ ab -n 10000 -c 10 http://192.168.1.102/index.html
+```
+Obteniendo los siguientes resultados para el balanceador **nginx**
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c14.PNG">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c15.PNG">
+</p>
+
+Y estos para **haproxy**
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c16.PNG">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c17.PNG">
+</p>
