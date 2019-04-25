@@ -19,6 +19,86 @@ De esta manera en esta práctica se realizarán las siguientes tareas:
 
 --------------------------------------------------------------------------------------------------------------------
 ## Instalación y configuración de nginx como balanceador de carga
+Partimos de una máquina virtual con Ubuntu server 16.04 instalado. Lo primero que hacemos es actualizar la máquina:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c1.PNG">
+</p>
+
+Una vez hecho esto, procedemos a instalar nginx con el siguiente comando:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c2.PNG">
+</p>
+
+Ya que está instalado, iniciamos el servicio de nginx con el siguiente comando:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c3.PNG">
+</p>
+
+Con esto finalizaría la instalación, por lo que podemos proceder a su configuración como balanceador de carga. Para ello tenemos que modificar el archivo */etc/nginx/conf.d/default.conf*, así que eliminamos el contenido que tuviese antes y lo cambiamos por el siguiente:
+
+```
+upstream apaches {
+	server 192.168.1.100;
+	server 192.168.1.101;
+}
+server{
+	listen 80;
+	server_name balanceador;
+	
+	access_log /var/log/nginx/balanceador.access.log;
+	error_log /var/log/nginx/balanceador.error.log;
+	root /var/www/;
+	
+	location /
+	{
+		proxy_pass http://apaches;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_http_version 1.1;
+		proxy_set_header Connection "";
+	}
+}
+```
+
+En esta configuración se utiliza el algoritmo **round-robin**, de manera que ambos servidores finales tienen la misma importancia. La configuración para que el balanceador funcione con ponderación sería la siguiente:
+
+```
+upstream apaches {
+	server 192.168.1.100 weight=2;
+	server 192.168.1.101 weight=1;
+}
+server{
+	listen 80;
+	server_name balanceador;
+	
+	access_log /var/log/nginx/balanceador.access.log;
+	error_log /var/log/nginx/balanceador.error.log;
+	root /var/www/;
+	
+	location /
+	{
+		proxy_pass http://apaches;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_http_version 1.1;
+		proxy_set_header Connection "";
+	}
+}
+```
+
+En esta configuración hemos establecido que por cada tres peticiones que lleguen al balanceador, la máquina con IP 192.168.1.100 atienda 2 de ellas, mientras que la otra solamente una. Esto se hace así porque en el enunciado se ha indicado que la primera máquina es el doble de potente que la segunda.
+Una vez configurado todo es necesario deshabilitar nginx como servidor. Para ello se modifica el archivo */etc/nginx/nginx.conf*, comentando la línea que dice 
+```
+include /etc/nginx/sites-enabled/*;
+```
+
+Una vez hecho esto reiniciamos el servicio de **nginx**. 
+Para comprobar que funciona el balanceo de carga y que ejecuta correctamente ambos algoritmos vamos a hacer 3 peticiones desde una cuarta máquina virtual.
 
 ## Instalación y configuración de haproxy como balanceador de carga
 
