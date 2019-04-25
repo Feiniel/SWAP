@@ -22,19 +22,19 @@ De esta manera en esta práctica se realizarán las siguientes tareas:
 Partimos de una máquina virtual con Ubuntu server 16.04 instalado. Lo primero que hacemos es actualizar la máquina:
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c1.PNG">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/C1.PNG">
 </p>
 
 Una vez hecho esto, procedemos a instalar nginx con el siguiente comando:
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c2.PNG">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/C2.PNG">
 </p>
 
 Ya que está instalado, iniciamos el servicio de nginx con el siguiente comando:
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c3.PNG">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/C3.PNG">
 </p>
 
 Con esto finalizaría la instalación, por lo que podemos proceder a su configuración como balanceador de carga. Para ello tenemos que modificar el archivo */etc/nginx/conf.d/default.conf*, así que eliminamos el contenido que tuviese antes y lo cambiamos por el siguiente:
@@ -98,11 +98,11 @@ include /etc/nginx/sites-enabled/*;
 ```
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c4.PNG">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/C4.PNG">
 </p>
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c5.PNG">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/C5.PNG">
 </p>
 
 Una vez hecho esto reiniciamos el servicio de **nginx**. 
