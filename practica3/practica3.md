@@ -106,7 +106,18 @@ include /etc/nginx/sites-enabled/*;
 </p>
 
 Una vez hecho esto reiniciamos el servicio de **nginx**. 
-Para comprobar que funciona el balanceo de carga y que ejecuta correctamente ambos algoritmos vamos a hacer 3 peticiones desde una cuarta máquina virtual.
+Para comprobar que funciona el balanceo de carga y que ejecuta correctamente ambos algoritmos vamos a hacer una serie de peticiones desde una cuarta máquina virtual.
+Primero probamos con el algoritmo **round-robin**, el cual vemos que funciona perfectamente, ya que las 4 peticiones que le hemos hecho, se han ido alternando entre una máquina y otra.
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c6.PNG">
+</p>
+
+Ahora probamos el algoritmo por **ponderación**. En la imagen se puede apreciar que funciona, ya que de las 4 peticiones que le hemos hecho no han sido alternadas, sino que en las 3 primeras iteraciones se han ejecutado dos peticiones en la máquina 1 y una en la máquina 2, tal y como queríamos.
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c7.PNG">
+</p>
 
 ## Instalación y configuración de haproxy como balanceador de carga
 
