@@ -97,6 +97,14 @@ Una vez configurado todo es necesario deshabilitar nginx como servidor. Para ell
 include /etc/nginx/sites-enabled/*;
 ```
 
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c4.PNG">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c5.PNG">
+</p>
+
 Una vez hecho esto reiniciamos el servicio de **nginx**. 
 Para comprobar que funciona el balanceo de carga y que ejecuta correctamente ambos algoritmos vamos a hacer 3 peticiones desde una cuarta máquina virtual.
 
