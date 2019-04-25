@@ -120,5 +120,36 @@ Ahora probamos el algoritmo por **ponderación**. En la imagen se puede apreciar
 </p>
 
 ## Instalación y configuración de haproxy como balanceador de carga
+Hemos instalado haproxy en la misma máquina que nginx, por lo que lo primero que hay que hacer antes de instalarlo es detener la ejecución de nginx con el siguiente comando:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c8.PNG">
+</p>
+
+Una vez hecho esto, procedemos a la instalación de haproxy:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c9.PNG">
+</p>
+
+Una vez  instalado debemos modificar el archivo */etc/haproxy/haproxy.cfg* ya que la configuración que trae por defecto no nos sirve. Borramos todo lo que contenía el archivo y los sustituimos por lo siguiente:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c10.PNG">
+</p>
+
+Con esto quedaría configurado el balanceador con un algoritmo de **round-robin**. 
+Una vez está todo instalado y configurado, lanzamos el servicio **haproxy** para poder probar que funciona correctamente (igual que hemos hecho con nginx). Para lanzar el servicio hemos ejecutado el siguiente comando:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c12.PNG">
+</p>
+
+Tras realizar la misma prueba que con nginx observamos que el algoritmo funciona correctamente y va alternando entre una máquina y otra.
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c13.PNG">
+</p>
+
 
 ## Sometimiento de la granja web a una alta carga con Apache Benchmark
