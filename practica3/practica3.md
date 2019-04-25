@@ -91,7 +91,7 @@ server{
 }
 ```
 
-En esta configuración hemos establecido que por cada tres peticiones que lleguen al balanceador, la máquina con IP 192.168.1.100 atienda 2 de ellas, mientras que la otra solamente una. Esto se hace así porque en el enunciado se ha indicado que la primera máquina es el doble de potente que la segunda.
+En esta configuración por **ponderación** hemos establecido que por cada tres peticiones que lleguen al balanceador, la máquina con IP 192.168.1.100 atienda 2 de ellas, mientras que la otra solamente una. Esto se hace así porque en el enunciado se ha indicado que la primera máquina es el doble de potente que la segunda.
 Una vez configurado todo es necesario deshabilitar nginx como servidor. Para ello se modifica el archivo */etc/nginx/nginx.conf*, comentando la línea que dice 
 ```
 include /etc/nginx/sites-enabled/*;
