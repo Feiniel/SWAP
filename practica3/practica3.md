@@ -176,3 +176,11 @@ Y estos para **haproxy**
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica3/imagenes/c17.PNG">
 </p>
+
+## Resumen comparativo
+En la siguiente tabla se muestra el tiempo que ha tardado cada uno de los balanceadores en resolver las 10000 peticiones:
+    
+   | Balanceador | Tiempo (s) | 
+   | :------: |:---------:|
+   | nginx | 5.233 |
+   | haproxy | 3.739 |
