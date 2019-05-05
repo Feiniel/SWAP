@@ -1,6 +1,7 @@
 # Estudio de ataques informáticos. ¿Cómo actúan los piratas informáticos?
- Autores: Marina Hurtado Rosales y Nicolás Rodríguez Hernández-Carrillo
- Correos: marinahurtado@correo.ugr.es; nicolasrhc@correo.ugr.es
+    Autores: Marina Hurtado Rosales y Nicolás Rodríguez Hernández-Carrillo
+    Correos: marinahurtado@correo.ugr.es; nicolasrhc@correo.ugr.es
+    
 ## Introducción
 Desde la aparición de los primeros ordenadores en la primera mitad del siglo XX el panorama tecnológico ha avanzado de forma impresionante. Los sistemas informáticos se han ido multiplicando, y cada vez han adquirido más y más importancia. Esto, sumado al auge de Internet, nos permite compartir y acceder a información con mayor rapidez cada vez.
 Hoy en día este avance tecnológico puede apreciarse en todos los niveles. El uso de la informática y de las redes de ordenadores ya no se reduce al ámbito laboral y profesional, sino que ha llegado a convertirse en un elemento cotidiano en la vida de las personas.
