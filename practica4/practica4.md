@@ -22,7 +22,7 @@ script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 Vamos a generar un certificado SSL autofirmado en la máquina 1, la cual tiene Ubuntu Server instalado. Para ello lo primero que hacemos es activar el módulo SSL de Apache:
 
 <p align="center">
-    ![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/1.png)
+    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/1.png">
 </p>
 
 > Pasamos a generar los certificados:
