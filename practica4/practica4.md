@@ -1,19 +1,10 @@
 # Práctica 4: Asegurar la granja web
     Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
     Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
-El objetivo de esta práctica es configurar todos los aspectos relativos a la seguridad de
-la granja web ya creada.
+El objetivo de esta práctica es configurar todos los aspectos relativos a la seguridad de la granja web ya creada.
 Hay que llevar a cabo las siguientes tareas:
-- Crear e instalar en la máquina 1 un certificado SSL autofirmado para configurar
-el acceso HTTPS a los servidores. Una vez configurada la máquina 1, se debe
-copiar al resto de máquinas servidoras y al balanceador de carga. Se debe
-configurar nginx adecuadamente para aceptar y balancear correctamente tanto
-el tráfico HTTP como el HTTPS.
-- Configurar las reglas del cortafuegos con IPTABLES en uno de los servidores
-web finales para asegurarlo, permitiendo el acceso por los puertos de HTTP y
-HTTPS a dicho servidor. Como se indica, esta configuración se hará en una de
-las máquinas servidoras finales (p.ej. en la máquina 1), y se debe poner en un
-script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
+- Crear e instalar en la máquina 1 un certificado SSL autofirmado para configurar el acceso HTTPS a los servidores. Una vez configurada la máquina 1, se debe copiar al resto de máquinas servidoras y al balanceador de carga. Se debe configurar nginx adecuadamente para aceptar y balancear correctamente tanto el tráfico HTTP como el HTTPS.
+- Configurar las reglas del cortafuegos con IPTABLES en uno de los servidores web finales para asegurarlo, permitiendo el acceso por los puertos de HTTP y HTTPS a dicho servidor. Como se indica, esta configuración se hará en una de las máquinas servidoras finales (p.ej. en la máquina 1), y se debe poner en un script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 
 -------------------------------------------------------------------------------------
 
@@ -31,7 +22,12 @@ Pasamos a generar los certificados. En este paso se nos pide una serie de datos 
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/2.png">
 </p>
 
-Una vez hecho esto, editamos el archivo de configuración del sitio default-ssl agregando estas lineas debajo de donde pone SSLEngine on:
+Una vez hecho esto, editamos el archivo de configuración del sitio default-ssl con el siguiente comando:
+
+```
+$ vi /etc/apache2/sites-available/default-ssl.conf
+```
+Modificamos el archivo agregando estas lineas debajo de donde pone SSLEngine on:
 
 ```
 SSLCertificateFile /etc/apache2/ssl/apache.crt
@@ -48,10 +44,11 @@ Activamos el sitio default-ssl y reiniciamos apache:
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/4.png">
 </p>
 
-Por último, y como queremos que la granja nos permita usar el HTTPS, debemos
-configurar el balanceador para que también acepte este tráfico (puerto 443). Para
-hacer esto, copiaremos la pareja de archivos (el .crt y el .key) a todas las máquinas de la granja web. Vamos a copiar los certifdicados en los archivos apache.crt y apache.key que generamos en el primer servidor en el paso anterior vamos a
-copiarlos al otro servidor y al balanceador.
+Con esto funcionaría HTTPS en la máquina 1, sin embargo, como queremos que la granja al completo nos permita usar el HTTPS, debemos configurar el segundo servidor (M2) y el balanceador para que también acepte este tráfico (puerto 443).
+Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de archivos (el .crt y el .key) que hemos generado en M1 en la carpeta /etc/apache2/ssl (la cual tenemos que crear) de la máquina M2. 
+
+
+Para hacer esto, copiaremos la pareja de archivos (el .crt y el .key) a todas las máquinas de la granja web. No vamos a generar nuevos certificados, sino que copiaremos los archivos apache.crt y apache.key que generamos en el primer servidor en el paso anterior en el otro servidor y el balanceador. Para ello hemos usado 
 
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/5.png)
 
