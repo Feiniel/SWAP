@@ -47,8 +47,17 @@ Activamos el sitio default-ssl y reiniciamos apache:
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c5.PNG">
 </p>
 
-Con esto funcionaría HTTPS en la máquina 1, sin embargo, como queremos que la granja al completo nos permita usar el HTTPS, debemos configurar el segundo servidor (M2) y el balanceador para que también acepte este tráfico (puerto 443).
-Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de archivos (el .crt y el .key) que hemos generado en M1 en la carpeta /etc/apache2/ssl (la cual tenemos que crear) de la máquina M2. 
+Con esto funcionaría HTTPS en la máquina 1, sin embargo, como queremos poder usarlo en la granja al completo, debemos configurar el segundo servidor (M2) y el balanceador para que también acepte este tráfico (puerto 443).
+
+## Acceso por HTTPS a M2
+Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de archivos (el .crt y el .key) que hemos generado en M1 en la carpeta /etc/apache2/ssl (la cual tenemos que crear) de la máquina M2. Para poder copiarlos en M2 primero hemos copiado la carpeta *ssl* en la carpeta *home*, y la hemos sincronizado con rsync. Posteriormente la hemos movido a donde corresponde.
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c6.PNG">
+</p>
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c7.PNG">
+</p>
 
 
 Para hacer esto, copiaremos la pareja de archivos (el .crt y el .key) a todas las máquinas de la granja web. No vamos a generar nuevos certificados, sino que copiaremos los archivos apache.crt y apache.key que generamos en el primer servidor en el paso anterior en el otro servidor y el balanceador. Para ello hemos usado 
