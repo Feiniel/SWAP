@@ -33,6 +33,7 @@ Pasamos a generar los certificados. En este paso se nos pide una serie de datos 
 
 Una vez hecho esto, editamos el archivo de configuración del sitio default-ssl agregando estas lineas debajo de donde pone SSLEngine on:
 > SSLCertificateFile /etc/apache2/ssl/apache.crt
+
 > SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 
 <p align="center">
