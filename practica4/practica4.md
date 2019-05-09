@@ -38,7 +38,7 @@ SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 ```
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/3.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c4.PNG">
 </p>
 
 Activamos el sitio default-ssl y reiniciamos apache:
