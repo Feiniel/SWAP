@@ -22,18 +22,22 @@ script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 Vamos a generar un certificado SSL autofirmado en la máquina 1, la cual tiene Ubuntu Server instalado. Para ello lo primero que hacemos es activar el módulo SSL de Apache:
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/1.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/1.png">
 </p>
 
-> Pasamos a generar los certificados:
+Pasamos a generar los certificados. En este paso se nos pide una serie de datos para configurar el dominio:
 
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/2.png)
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/2.png">
+</p>
 
-> Editamos el archivo de configuración del sitio default-ssl, y agregamos estas lineas debajo de donde pone SSLEngine on:
-SSLCertificateFile /etc/apache2/ssl/apache.crt
-SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+Una vez hecho esto, editamos el archivo de configuración del sitio default-ssl agregando estas lineas debajo de donde pone SSLEngine on:
+> SSLCertificateFile /etc/apache2/ssl/apache.crt
+> SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/3.png)
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/3.png">
+</p>
 
 Activamos el sitio default-ssl y reiniciamos apache:
 
