@@ -83,9 +83,17 @@ Lo primero que hay que hacer, al igual que en el apartado anterior, es copiar lo
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c11.PNG">
 </p>
 
-En el balanceador pondremos la ruta a la carpeta donde hayamos copiado el apache.crt y el apache.key. Después, en el balanceador nginx debemos añadir lo siguiente al archivo /etc/nginx/conf.d/default.conf y reiniciarlo:
+Después, en el balanceador nginx debemos añadir lo siguiente al archivo /etc/nginx/conf.d/default.conf y reiniciarlo:
 
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/7.png)
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c12.PNG">
+</p>
+
+Una vez reiniciado, comprobamos que funciona haciéndole peticiones desde la máquina M4
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c13.PNG">
+</p>
 
 ## Configuración del cortafuegos
 
