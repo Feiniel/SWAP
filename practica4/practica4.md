@@ -49,7 +49,7 @@ Activamos el sitio default-ssl y reiniciamos apache:
 
 Con esto funcionaría HTTPS en la máquina 1, sin embargo, como queremos poder usarlo en la granja al completo, debemos configurar el segundo servidor (M2) y el balanceador para que también acepte este tráfico (puerto 443).
 
-## Acceso por HTTPS a M2
+### Acceso por HTTPS a M2
 Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de archivos (el .crt y el .key) que hemos generado en M1 en la carpeta /etc/apache2/ssl (la cual tenemos que crear) de la máquina M2. Para poder copiarlos en M2 primero hemos copiado la carpeta *ssl* en la carpeta *home*, y la hemos sincronizado con rsync. Posteriormente la hemos movido a donde corresponde.
 
 <p align="center">
