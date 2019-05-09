@@ -128,3 +128,8 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT
 ```
 
+Para comprobar que funciona hemos ejecutado cada una de estas órdenes por separado y comprobando que funcionan haciendo peticiones desde la máquina M4. 
+- Primero hemos bloqueado todo el tráfico (pasos 1, 2 y 3). Al ejecutar una petición *ssh* o *http* a la máquina M1 obtenemos:
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c14.PNG">
+</p>
