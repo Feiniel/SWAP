@@ -19,11 +19,11 @@ script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 
 ## Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
 
-Vamos a generar un certificado SSL autofirmado en Ubuntu Server:
+Vamos a generar un certificado SSL autofirmado en la máquina 1, la cual tiene Ubuntu Server instalado. Para ello lo primero que hacemos es activar el módulo SSL de Apache:
 
-> Activamos el módulo SSL de Apache:
-
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/1.png)
+<p align="center">
+    ![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/1.png)
+</p>
 
 > Pasamos a generar los certificados:
 
