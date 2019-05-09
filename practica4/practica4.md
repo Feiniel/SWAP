@@ -44,7 +44,7 @@ SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 Activamos el sitio default-ssl y reiniciamos apache:
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/4.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c5.PNG">
 </p>
 
 Con esto funcionaría HTTPS en la máquina 1, sin embargo, como queremos que la granja al completo nos permita usar el HTTPS, debemos configurar el segundo servidor (M2) y el balanceador para que también acepte este tráfico (puerto 443).
