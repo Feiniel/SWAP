@@ -44,7 +44,9 @@ SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 
 Activamos el sitio default-ssl y reiniciamos apache:
 
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/4.png)
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/4.png">
+</p>
 
 Por último, y como queremos que la granja nos permita usar el HTTPS, debemos
 configurar el balanceador para que también acepte este tráfico (puerto 443). Para
