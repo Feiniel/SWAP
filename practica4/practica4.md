@@ -59,15 +59,11 @@ Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c7.PNG">
 </p>
 
+Ahora debemos activar el sitio default-ssl y reiniciar apache (como hicimos en el primer servidor). 
 
-Para hacer esto, copiaremos la pareja de archivos (el .crt y el .key) a todas las máquinas de la granja web. No vamos a generar nuevos certificados, sino que copiaremos los archivos apache.crt y apache.key que generamos en el primer servidor en el paso anterior en el otro servidor y el balanceador. Para ello hemos usado 
-
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/5.png)
-
-En el segundo servidor debemos activar el sitio default-ssl y reiniciar apache (como
-hicimos en el primer servidor). 
-
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/6.png)
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c8.PNG">
+</p>
 
 En el balanceador pondremos la ruta a la carpeta donde hayamos copiado el apache.crt y el apache.key. Después, en el balanceador nginx debemos añadir lo siguiente al archivo /etc/nginx/conf.d/default.conf y reiniciarlo:
 
