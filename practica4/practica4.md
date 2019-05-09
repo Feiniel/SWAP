@@ -71,6 +71,18 @@ Una vez hecho esto comprobamos que funciona en ambas máquinas servidoras hacien
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c9.PNG">
 </p>
 
+### Acceso al balanceador (nginx) por HTTPS
+ 
+Lo primero que hay que hacer, al igual que en el apartado anterior, es copiar los archivos de certificación en la máquina balanceadora. En este caso los situaremos en la carpeta */etc/ssl/*.
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c10.PNG">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c11.PNG">
+</p>
+
 En el balanceador pondremos la ruta a la carpeta donde hayamos copiado el apache.crt y el apache.key. Después, en el balanceador nginx debemos añadir lo siguiente al archivo /etc/nginx/conf.d/default.conf y reiniciarlo:
 
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/7.png)
