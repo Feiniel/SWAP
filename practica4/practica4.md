@@ -14,7 +14,8 @@ Vamos a generar un certificado SSL autofirmado en la máquina 1, la cual tiene U
 
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c1.PNG">
-    
+</p>
+<p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c2.PNG">
 </p>
 
