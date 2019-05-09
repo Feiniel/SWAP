@@ -97,7 +97,34 @@ Una vez reiniciado, comprobamos que funciona haciéndole peticiones desde la má
 
 ## Configuración del cortafuegos
 
-Creamos un script con las órdenes para una configuración básica de un servidor web y lo ejecutamos:
+Hemos configurado el cortafuegos con IPTABLES en la máquina M1, con dirección IP 192.168.1.100. Para hacer esto hemos creado un script el cual se tiene que ejecutar en el arranque del sistema. El script es el siguiente:
 
-![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/8.png)
+```
+# (1) Eliminar todas las reglas (configuración limpia)
+iptables -F
+iptables -X
+iptables -Z
+iptables -t nat -F
+
+# (2) Política por defecto: denegar todo el tráfico
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+
+# (3) Permitir cualquier acceso desde localhost (interface lo)
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+# (4) Abrir el puerto 22 para permitir el acceso por SSH
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+
+# (5) Abrir los puertos HTTP (80) de servidor web
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 80 -j ACCEPT
+
+# (6) Abrir los puertos HTTPS (443) de servidor web
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT
+```
 
