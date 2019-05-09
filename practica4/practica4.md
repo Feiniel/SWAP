@@ -1,6 +1,19 @@
 # Práctica 4: Asegurar la granja web
     Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
     Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
+El objetivo de esta práctica es configurar todos los aspectos relativos a la seguridad de
+la granja web ya creada.
+Hay que llevar a cabo las siguientes tareas:
+- Crear e instalar en la máquina 1 un certificado SSL autofirmado para configurar
+el acceso HTTPS a los servidores. Una vez configurada la máquina 1, se debe
+copiar al resto de máquinas servidoras y al balanceador de carga. Se debe
+configurar nginx adecuadamente para aceptar y balancear correctamente tanto
+el tráfico HTTP como el HTTPS.
+- Configurar las reglas del cortafuegos con IPTABLES en uno de los servidores
+web finales para asegurarlo, permitiendo el acceso por los puertos de HTTP y
+HTTPS a dicho servidor. Como se indica, esta configuración se hará en una de
+las máquinas servidoras finales (p.ej. en la máquina 1), y se debe poner en un
+script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 
 ## 4.1 Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
 
