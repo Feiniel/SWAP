@@ -15,7 +15,9 @@ HTTPS a dicho servidor. Como se indica, esta configuración se hará en una de
 las máquinas servidoras finales (p.ej. en la máquina 1), y se debe poner en un
 script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
 
-## 4.1 Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
+-------------------------------------------------------------------------------------
+
+## Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
 
 Vamos a generar un certificado SSL autofirmado en Ubuntu Server:
 
@@ -53,7 +55,7 @@ En el balanceador pondremos la ruta a la carpeta donde hayamos copiado el apache
 
 ![img](https://github.com/davidvenegasfb/SWAP/blob/master/practica4/imagenes/7.png)
 
-## 4.2 Configuración del cortafuegos
+## Configuración del cortafuegos
 
 Creamos un script con las órdenes para una configuración básica de un servidor web y lo ejecutamos:
 
