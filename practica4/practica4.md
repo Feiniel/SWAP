@@ -59,10 +59,16 @@ Para configurar HTTPS en el segundo servidor simplemente copiaremos la pareja de
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c7.PNG">
 </p>
 
-Ahora debemos activar el sitio default-ssl y reiniciar apache (como hicimos en el primer servidor). 
+Una vez hecho esto, modificamos el archivo */etc/apache2/sites-available/default-ssl.conf* de la misma forma que hemos hecho con la máquina M1. Por último, debemos activar el sitio default-ssl y reiniciar apache (como hicimos en el primer servidor). 
 
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c8.PNG">
+</p>
+
+Una vez hecho esto comprobamos que funciona en ambas máquinas servidoras haciendo una petición a cada una desde la máquina M4:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c9.PNG">
 </p>
 
 En el balanceador pondremos la ruta a la carpeta donde hayamos copiado el apache.crt y el apache.key. Después, en el balanceador nginx debemos añadir lo siguiente al archivo /etc/nginx/conf.d/default.conf y reiniciarlo:
