@@ -1,6 +1,6 @@
 # Práctica 4: Asegurar la granja web
-  Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
-  Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
+    Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
+    Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
 
 ## 4.1 Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
 
