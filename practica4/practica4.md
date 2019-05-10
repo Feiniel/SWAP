@@ -134,15 +134,21 @@ Para comprobar que funciona hemos ejecutado cada una de estas órdenes por separ
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c14.PNG">
 </p>
 
+Como podemos observar, no se acepta ningún tipo de petición.
+
 - Ahora permitimos el acceso por SSH (paso 4). Sigue estando bloqueado para HTTP y HTTPS.
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c15.PNG">
 </p>
 
+Ahora se acepta únicamente la petición SSH
+
 - Permitimos el acceso por HTTP (paso 5).
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c16.PNG">
 </p>
+
+Se acepta la petición HTTP, pero no la HTTPS.
 
 - Permitimos el acceso por HTTPS (paso 6).
 <p align="center">
