@@ -160,3 +160,9 @@ Si ejecutamos el comando *netstat -tulpn* podemos observar qué puertos están e
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c18.PNG">
 </p>
+
+Lo único que faltaría es que este script se ejecutase en el arranque del sistema. Para ello se puede añadir la línea para la ejecución del script al final del archivo */etc/rc.local*, tal y como se muestra en la imagen:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c19.PNG">
+</p>
