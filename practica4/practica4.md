@@ -133,3 +133,24 @@ Para comprobar que funciona hemos ejecutado cada una de estas órdenes por separ
 <p align="center">
     <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c14.PNG">
 </p>
+
+- Ahora permitimos el acceso por SSH (paso 4). Sigue estando bloqueado para HTTP y HTTPS.
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c15.PNG">
+</p>
+
+- Permitimos el acceso por HTTP (paso 5).
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c16.PNG">
+</p>
+
+- Permitimos el acceso por HTTPS (paso 6).
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c17.PNG">
+</p>
+
+Si ejecutamos el comando *netstat -tulpn* podemos observar qué puertos están escuchando:
+
+<p align="center">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica4/imagenes/c18.PNG">
+</p>
