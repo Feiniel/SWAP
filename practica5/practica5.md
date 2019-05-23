@@ -18,7 +18,7 @@ Vamos a crear un tar.gz con un directorio de un equipo y dejarlo en otro mediant
 >tar czf - directorio | ssh equipodestino 'cat > ~/tar.tgz'
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/0.0.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/0.0.png">
 </p>
 
 ## Crear una BD e insertar datos
@@ -44,7 +44,7 @@ Insertamos una linea de datos en nuestra tabla con:
 >insert into datos(nombre,tlf) values ("pepe",95834987);
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/0.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/0.png">
 </p>
 
 Aquí podemos ver como como podemos hacer consultas sql como:
@@ -54,7 +54,7 @@ O que nos diga los tipos de datos de la tabla:
 >describe datos;
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/1.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/1.png">
 </p>
 
 
@@ -70,32 +70,32 @@ En primer lugar debemos de tener en cuenta que los datos pueden estar actualizá
 >FLUSH TABLES WITH READ LOCK;
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/2.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/2.png">
 </p>
 
 Ahora ya podemos usar mysqldump para guardar los datos.
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/3.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/3.png">
 </p>
 
 Si hacemos un vim de contactos.sql veremos:
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/4.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/4.png">
 </p>
 
 Y desbloqueamos por último las tablas:
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/5.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/5.png">
 </p>
 
 Ahora vamos a la máquina 2 para copiar el archivo .SQL con todos los datos salvados desde la máquina principal con el comando:
 >scp 192.168.1.100/tmp/ejemplodb.sql /tmp/
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/7.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/7.png">
 </p>
 
 y habremos copiado desde la máquina principal (1) a la máquina secundaria (2) los
@@ -105,7 +105,7 @@ Con el archivo de copia de seguridad en el esclavo ya podemos importar la BD com
 >CREATE DATABASE ‘contactos’;
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/6.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/6.png">
 </p>
 
 En un segundo paso restauramos los datos contenidos en la BD (se crearán las
@@ -114,7 +114,7 @@ tablas en el proceso), con el comando:
 >mysql -u root -p contactos < /tmp/contactos.sql
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/8.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/8.png">
 </p>
 
 ## 5.4 Replicación de BD mediante una configuración maestro-esclavo
@@ -123,12 +123,12 @@ Lo primero que debemos hacer es la configuración de mysql del maestro, para lo 
 >vim /etc/mysql/my.cnf
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/7.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/7.png">
 </p>
 
 Y reiniciamos el servicio con:
 >/etc/init.d/mysql restart
 
 <p align="center">
-    <img src="https://github.com/davidvenegasfb/SWAP/blob/master/practica5/8.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/8.png">
 </p>
