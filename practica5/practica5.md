@@ -123,12 +123,12 @@ Lo primero que debemos hacer es la configuración de mysql del maestro, para lo 
 >vim /etc/mysql/my.cnf
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/7.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/9.png">
 </p>
 
 Y reiniciamos el servicio con:
 >/etc/init.d/mysql restart
 
 <p align="center">
-    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/8.png">
+    <img src="https://github.com/Feiniel/SWAP/blob/master/practica5/imagenes/10.png">
 </p>
