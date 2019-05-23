@@ -3,10 +3,12 @@
     Autores: David Joaquín González-Venegas Guerra-Librero y Marina Hurtado Rosales
     Correos: davidvenegasfb@correo.ugr.es; marinahurtado@correo.ugr.es
 
-El objetivo de esta práctica es configurar todos los aspectos relativos a la seguridad de la granja web ya creada.
-Hay que llevar a cabo las siguientes tareas:
-- Crear e instalar en la máquina 1 un certificado SSL autofirmado para configurar el acceso HTTPS a los servidores. Una vez configurada la máquina 1, se debe copiar al resto de máquinas servidoras y al balanceador de carga. Se debe configurar nginx adecuadamente para aceptar y balancear correctamente tanto el tráfico HTTP como el HTTPS.
-- Configurar las reglas del cortafuegos con IPTABLES en uno de los servidores web finales para asegurarlo, permitiendo el acceso por los puertos de HTTP y HTTPS a dicho servidor. Como se indica, esta configuración se hará en una de las máquinas servidoras finales (p.ej. en la máquina 1), y se debe poner en un script con las reglas del cortafuegos que se ejecute en el arranque del sistema.
+En esta práctica el objetivo es configurar las máquinas virtuales para trabajar de forma que se mantenga actualizada la información en una BD entre dos servidores (la máquina secundaria mantendrá siempre actualizada la información que hay en la máquina servidora principal).
+Hay que llevar a cabo las siguientes tareas obligatorias:
+- Crear una BD con al menos una tabla y algunos datos.
+- Realizar la copia de seguridad de la BD completa usando mysqldump en la máquina principal y copiar el archivo de copia de seguridad a la máquina secundaria.
+- Restaurar dicha copia de seguridad en la segunda máquina (clonado manual de la BD), de forma que en ambas máquinas esté esa BD de forma idéntica.
+- Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.
 
 -------------------------------------------------------------------------------------
 
