@@ -1,4 +1,4 @@
-# Estudio de ataques informáticos. ¿Cómo actúan los piratas informáticos?
+# Seguridad y ataques informáticos
     Autores: Marina Hurtado Rosales y Nicolás Rodríguez Hernández-Carrillo
     Correos: marinahurtado@correo.ugr.es; nicolasrhc@correo.ugr.es
     
